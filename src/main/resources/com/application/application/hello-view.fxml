@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<HBox alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="600.0" minWidth="800.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.application.application.HelloController">
+    <children>
+        <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="600.0" prefWidth="400.0">
+            <children>
+                <TextArea fx:id="formatText" focusTraversable="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onKeyReleased="#handleKeyReleased" prefHeight="280.0" prefWidth="380.0">
+                    <font>
+                        <Font size="13.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                    </VBox.margin>
+                </TextArea>
+                <Button fx:id="formatButton" disable="true"  maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#formattedButtonClicked" text="Format">
+                    <VBox.margin>
+                        <Insets bottom="10.0" left="345.0" right="10.0" top="15.0" />
+                    </VBox.margin>
+                </Button>
+                <Button fx:id="clearButton" visible="false" mnemonicParsing="false" onAction="#cleanButtonClicked" text="Clear">
+                    <VBox.margin>
+                        <Insets left="350.0" />
+                    </VBox.margin>
+                </Button>
+            </children>
+        </VBox>
+        <Line endX="1.0" endY="600.0" />
+        <Line endY="600.0" startX="1.0" />
+        <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="600.0" prefWidth="400.0">
+            <children>
+                <ScrollPane fx:id="formattedLabel" hbarPolicy="NEVER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="581.0" prefWidth="380.0" vbarPolicy="ALWAYS">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" />
+                    </content>
+                    <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                    </HBox.margin>
+                </ScrollPane>
+            </children></HBox>
+    </children>
+</HBox>
