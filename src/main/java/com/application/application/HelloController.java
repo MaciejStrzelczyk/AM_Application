@@ -41,6 +41,11 @@ public class HelloController implements Initializable {
         return text;
     }
 
+    String setTextColorTextArea(){
+        String text = "Put json text in one line";
+        return text;
+    }
+
     @FXML
     protected void formattedButtonClicked() throws IOException {
         String text = formatText.getText();
@@ -65,12 +70,15 @@ public class HelloController implements Initializable {
         boolean disableButton = text.isEmpty() || text.trim().isEmpty();
         formatButton.setDisable(disableButton);
         clearButton.setVisible(!disableButton);
+        formatText.setStyle("-fx-text-fill: black ;");
     }
 
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         formattedLabel.setContent(setTextColorScrollPane());
+        formatText.setText(setTextColorTextArea());
+        formatText.setStyle("-fx-text-fill: gray ;");
     }
 
     @FXML
